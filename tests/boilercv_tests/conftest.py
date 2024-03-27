@@ -235,7 +235,7 @@ def pytest_harvest_xdist_worker_dump(worker_id, session_items, fixture_store):
 def pytest_harvest_xdist_load():
     """Restore the saved objects from file system."""
     workers_saved_material = {}
-    for pkl_file in RESULTS_PATH.glob("*.pkl"):
+    for pkl_file in sorted(RESULTS_PATH.glob("*.pkl")):
         wid = pkl_file.stem
         with pkl_file.open("rb") as f:
             workers_saved_material[wid] = pickle.load(f)

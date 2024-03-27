@@ -37,7 +37,7 @@ def rename_notes(source):
 def rename_cines(source):
     destination = PARAMS.paths.cines
     trials = [trial / "video" for trial in source.iterdir() if trial.is_dir()]
-    videos = chain.from_iterable(trial.glob("*.cine") for trial in trials)
+    videos = sorted(chain.from_iterable(trial.glob("*.cine") for trial in trials))
     for video in videos:
         video.rename(destination / video.name.removeprefix("results_"))
 
@@ -45,7 +45,7 @@ def rename_cines(source):
 def rename_sheets(source):
     sheets_dest = PARAMS.paths.sheets
     data = [trial / "data" for trial in sorted(source.iterdir()) if trial.is_dir()]
-    sheets = chain.from_iterable(trial.glob("*.csv") for trial in data)
+    sheets = sorted(chain.from_iterable(trial.glob("*.csv") for trial in data))
     for sheet in sheets:
         sheet.rename(sheets_dest / sheet.name.removeprefix("results_"))
 

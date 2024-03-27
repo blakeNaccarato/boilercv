@@ -11,6 +11,8 @@ tests/plots
 # * -------------------------------------------------------------------------------- * #
 # * Template gitignore
 
+# uv binary
+bin
 # Locally-compiled dependencies
 .comps
 # Ignore `.ruff-cache` just in case, and to grey it out in the sidebar

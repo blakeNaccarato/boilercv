@@ -10,7 +10,7 @@ NB_DIR = Path(
 )
 GLOB_STEM = "23-09-21T19_subcool*"
 OLD_NBS, H5S = (
-    list(NB_DIR.glob(f"{GLOB_STEM}{suffix}")) for suffix in (".ipynb", ".h5")
+    sorted(NB_DIR.glob(f"{GLOB_STEM}{suffix}")) for suffix in (".ipynb", ".h5")
 )
 LINKS_LINE = 75
 LINKS_START = 88
