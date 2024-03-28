@@ -13,7 +13,7 @@ dependencies = [
     "zstandard==0.22.0",
 ]
 [project.scripts]
-boilercv_tools = "boilercv_tools.__main__:main"
+"boilercv_tools" = "boilercv_tools.__main__:main"
 
 [tool.fawltydeps]
 actions = ["check_undeclared"]

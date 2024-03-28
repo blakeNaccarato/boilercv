@@ -25,24 +25,6 @@
       "groupName": "template",
       "matchManagers": ["git-submodules"],
       "matchPackageNames": ["submodules/template"]
-    },
-    {
-      "description": "Stubs for pandas sometimes lag",
-      "groupName": "pandas",
-      "matchManagers": ["pep621", "pip_requirements"],
-      "matchPackageNames": ["pandas", "pandas-stubs"]
-    },
-    {
-      "description": "Imageio sometimes lags pillow.",
-      "groupName": "imageio",
-      "matchManagers": ["pep621", "pip_requirements"],
-      "matchPackageNames": ["imageio"]
-    },
-    {
-      "description": "Pillow sometimes leads imageio.",
-      "groupName": "pillow",
-      "matchManagers": ["pep621", "pip_requirements"],
-      "matchPackageNames": ["pillow"]
     }
   ]
 }
