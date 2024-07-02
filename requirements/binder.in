@@ -1,0 +1,4 @@
+--editable boilercv[cv] @ .
+--editable boilercv_docs @ docs
+--editable boilercv_pipeline[cv] @ pipeline
+--editable boilercore @ submodules/boilercore

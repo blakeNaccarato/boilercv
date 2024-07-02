@@ -17,7 +17,7 @@ dependencies = [
     "pytest-plt==1.1.1",
     "pytest-xdist[psutil,setproctitle]==3.5.0",
     # ? Other deps
-    "cachier @ git+https://github.com/blakeNaccarato/cachier@0892f53dc8fd9fb8a7f959305a1a9ec692876dc0", # Allows `dill` caching
+    "cachier>=3.0.0",
     "matplotlib>=3.7.2",
     "numpy>=1.24.4",
     "pandas[hdf5,performance]>=2.2.2",
@@ -28,14 +28,7 @@ dependencies = [
 [tool.fawltydeps]
 deps = ["tests/pyproject.toml"]
 code = ["tests/boilercv_tests"]
-ignore_undeclared = [
-    "boilercore",
-    "boilercv_docs",
-    "boilercv_pipeline",
-    "boilercv_tests",
-    "boilercv_tools",
-    "boilercv",
-]
+ignore_undeclared = ["boilercore", "boilercv"]
 ignore_unused = [
     # ? Core testing tools or plugins
     "pytest-cov",

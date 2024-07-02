@@ -13,21 +13,16 @@ dependencies = [
     "colorcet>=3.0.1",
     "copykitten>=1.1.1",
     "cyclopts>=2.6.1",
-    # ? https://github.com/iterative/vscode-dvc/blob/1.2.12/extension/src/cli/dvc/contract.ts#L3
-    "dvc>=3.33.3",
     "imageio[pyav]>=2.34.1",
     "loguru>=0.7.0",
     "matplotlib>=3.7.2",
     "numpy>=1.24.4",
-    "opencv-python-headless>=4.9.0.80",
     "pandas[hdf5,performance]>=2.2.2",
     "pillow>=10.3.0",
     "ploomber-engine>=0.0.30",
     "pyarrow>=14.0.1",
     "pydantic>=2.7.1",
     "pyqtgraph>=0.13.3",
-    # ? Wheels are missing on Linux for PySide6, `uv` doesn't like it
-    "pyside6==6.7.1 ; sys_platform != 'linux'",
     "ruamel.yaml>=0.17.32",
     "scikit-image>=0.21.0",
     "scipy>=1.11.1",
@@ -40,21 +35,13 @@ dependencies = [
     "watchfiles>=0.22.0",
     "xarray[accel,io,parallel]>=2023.7.0",
 ]
-
+[project.optional-dependencies]
+# * Minimal CV flavor needed, but allow `boilercv` to coexist with different flavors
+cv = ["opencv-python-headless>=4.9.0.80"]
 [tool.fawltydeps]
 deps = ["pipeline/pyproject.toml"]
 code = ["pipeline/boilercv_pipeline"]
-ignore_undeclared = [
-    "boilercore",
-    "boilercv_docs",
-    "boilercv_pipeline",
-    "boilercv_scripts",
-    "boilercv_tests",
-    "boilercv",
-]
+ignore_undeclared = ["boilercore", "boilercv", "PySide6"]
 ignore_unused = [
-    "dvc",     # Core dependency for reproducing the pipeline
-    "pyarrow", # Used in `boilercv.__init__`
+    "pyarrow", # Used in `boilercv_pipeline.__init__`
 ]
-[tool.fawltydeps.custom_mapping]
-pydantic = ["pydantic", "pydantic_core"]

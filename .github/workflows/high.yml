@@ -115,7 +115,9 @@ jobs:
           - "macos-13"
           - "ubuntu-22.04"
           - "windows-2022"
-        python: ["3.11"]
+        python:
+          - "3.11"
+          - "3.12"
     runs-on: "${{ matrix.runner }}"
     steps:
       # ! https://askubuntu.com/questions/900285/libegl-so-1-is-not-a-symbolic-link

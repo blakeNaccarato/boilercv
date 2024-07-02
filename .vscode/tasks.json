@@ -54,14 +54,19 @@
     },
     {
       "id": "templateOptions",
-      "description": "Template options.",
       "type": "pickString",
-      "options": ["", "-Stay", "-Stay -Prompt", "-Recopy -Prompt"]
+      "description": "Template options.",
+      "options": ["", "-Prompt", "-Stay", "-Stay -Prompt", "-Recopy -Prompt"]
+    },
+    {
+      "id": "ref",
+      "type": "promptString",
+      "description": "Commit SHA or other VCS reference.",
     },
     {
       "id": "changeType",
-      "description": "Change type.",
       "type": "pickString",
+      "description": "Change type.",
       "options": ["breaking", "deprecation", "change"]
     }
   ],
@@ -241,6 +246,13 @@
       "problemMatcher": []
     },
     {
+      "label": "setup: Sync with specific template ref",
+      "type": "shell",
+      "command": "scripts/Sync-Template.ps1 ${input:ref} ${input:templateOptions}",
+      "icon": { "id": "file-symlink-directory" },
+      "problemMatcher": []
+    },
+    {
       "label": "setup: Sync contributor environment",
       "type": "shell",
       "command": "if (!$Env:DEVCONTAINER) {scripts/Sync-Py.ps1}",
@@ -372,7 +384,7 @@
     {
       "label": "task: Bump version",
       "type": "shell",
-      "command": "copier update --vcs-ref=$(git rev-parse HEAD:submodules/template) --defaults --data project_version='${input:version}'; git add .; git commit -m 'Bump version'; git push",
+      "command": "copier update --vcs-ref=$(git rev-parse HEAD:submodules/template) --defaults --data project_version='${input:version}'; git add .; git commit -m 'Bump version'; towncrier build --version '${input:version}'",
       "icon": { "id": "graph-line" },
       "problemMatcher": []
     }

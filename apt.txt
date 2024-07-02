@@ -1,2 +1,0 @@
-# Binder
-libgl1-mesa-glx

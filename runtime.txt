@@ -1,2 +1,1 @@
-# Binder
 python-3.11

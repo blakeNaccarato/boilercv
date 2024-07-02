@@ -45,7 +45,8 @@ There are other details of this process, such as the hosting of data in the `dat
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/asennain"><img src="https://avatars.githubusercontent.com/u/119456024?v=4?s=100" width="100px;" alt="asennain"/><br /><sub><b>asennain</b></sub></a><br /><a href="#doc-asennain" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.blakenaccarato.com/"><img src="https://avatars.githubusercontent.com/u/20692450?v=4?s=100" width="100px;" alt="Blake Naccarato"/><br /><sub><b>Blake Naccarato</b></sub></a><br /><a href="CONTRIBUTORS.md#code-blakeNaccarato" title="Code">�</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/asennain"><img src="https://avatars.githubusercontent.com/u/119456024?v=4?s=100" width="100px;" alt="asennain"/><br /><sub><b>asennain</b></sub></a><br /><a href="CONTRIBUTORS.md#doc-asennain" title="Documentation">�</a></td>
     </tr>
   </tbody>
 </table>

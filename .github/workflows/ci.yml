@@ -155,13 +155,9 @@ jobs:
           - "macos-13"
           - "ubuntu-22.04"
           - "windows-2022"
-        # ? https://github.com/actions/python-versions/releases
         python:
-          # - "3.10"  # ? Using some 3.11-specific features
           - "3.11"
-          # - "3.12" # ? No support in my commit-pinned fork of cachier
-          # - "3.13.0-beta.2" # ? No support in my commit-pinned fork of cachier
-          # - "3.14.0-alpha.0"  # ? https://github.com/PyO3/pyo3/issues/3555
+          - "3.12"
     runs-on: "${{ matrix.runner }}"
     steps:
       # ! https://askubuntu.com/questions/900285/libegl-so-1-is-not-a-symbolic-link

@@ -10,6 +10,15 @@
   "projectOwner": "softboiler",
   "contributors": [
     {
+      "login": "blakeNaccarato",
+      "name": "Blake Naccarato",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20692450?v=4",
+      "profile": "https://www.blakenaccarato.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "avatar_url": "https://avatars.githubusercontent.com/u/119456024?v=4",
       "contributions": [
         "doc"
